@@ -4,19 +4,88 @@
 <html>
     <head>
         <title>I come from template!!</title>
-        <style>
-            body {
-               background-color: lightyellow;
-            }
-            em {
-                color: LightSeaGreen;
-            }
-        </style>
     </head>
     <body>
         <h1>Hello World!</h1>
         <em>{{ current_time }}</em>
+        <p>Django Test</p>
+        <h1>Pokemon Type</h1>
+        <p>{{ link }}</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>攻\防</th>
+                    <th>一般</th>
+                    <th>格鬥</th>
+                    <th>飛行</th>
+                    <th>毒</th>
+                    <th>地面</th>
+                    <th>岩石</th>
+                    <th>蟲</th>
+                    <th>幽靈</th>
+                    <th>鋼</th>
+                    <th>火</th>
+                    <th>水</th>
+                    <th>草</th>
+                    <th>電</th>
+                    <th>超能力</th>
+                    <th>冰</th>
+                    <th>龍</th>
+                    <th>惡</th>
+                    <th>妖精</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tp in pm_show %}
+                <tr>
+                    <td>{{ tp.屬性相剋表 }}</td>
+                    <td>{{ tp.一般 }}</td>
+                    <td>{{ tp.格鬥 }}</td>
+                    <td>{{ tp.飛行 }}</td>
+                    <td>{{ tp.毒 }}</td>
+                    <td>{{ tp.地面 }}</td>
+                    <td>{{ tp.岩石 }}</td>
+                    <td>{{ tp.蟲 }}</td>
+                    <td>{{ tp.幽靈 }}</td>
+                    <td>{{ tp.鋼 }}</td>
+                    <td>{{ tp.火 }}</td>
+                    <td>{{ tp.水 }}</td>
+                    <td>{{ tp.草 }}</td>
+                    <td>{{ tp.電 }}</td>
+                    <td>{{ tp.超能力 }}</td>
+                    <td>{{ tp.冰 }}</td>
+                    <td>{{ tp.龍 }}</td>
+                    <td>{{ tp.惡}}</td>
+                    <td>{{ tp.妖精 }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </body>
 </html>
 
-<!--Style-->
+
+<style>
+    body {
+       background-color: lightyellow;
+    }
+    em {
+        color: LightSeaGreen;
+    }
+    p {
+        color: rgb(32, 34, 178);
+    }
+    table {
+        width: 50%;
+        /* border-collapse: collapse; */
+        border: 1px solid black;
+    }
+    th {
+        height: 70px;
+    }
+    td {
+        height: 30px;
+        text-align: right;
+    }
+</style>
+
