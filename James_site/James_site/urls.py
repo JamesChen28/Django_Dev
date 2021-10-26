@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 # from django.conf.urls import include
-from SNA.views import hello_world
+from Pokemon.views import hello_world
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', hello_world),
-    # path('', include('SNA.urls')),
+    # path('', include('Pokemon.urls')),
 ]
