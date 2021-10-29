@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% block title %}
+    <title>Django Demonstration Preview</title>
+    {% endblock %}
+</head>
+
+<body>
+    {% block sidebar %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <ul class="sidebar-nav">
+        <li><a href="{% url 'hello_world' %}">Home</a></li>
+        <li><a href="pokemon.html">Pokemon</a></li>
+        <li><a href="{% url 'pokemon' %}">Animal Crossing</a></li>
+    </ul>
+    {% endblock %}
+
+    {% block content %}
+    <h1>base generic</h1>
+    {% endblock %}
+</body>
+
+</html>

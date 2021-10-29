@@ -1,16 +1,16 @@
 <!-- hello_world.html -->
-
+{% extends "base_generic.html" %}
+{% block content %}
 <!DOCTYPE html>
 <html>
     <head>
-        <title>I come from template!!</title>
+        <title>Django Preview</title>
     </head>
     <body>
         <h1>Hello World!</h1>
-        <em>{{ current_time }}</em>
-        <p>Django Test</p>
+        <em>Current Time: {{ current_time }}</em>
+        <p>This is Django demonstration.</p>
         <h1>Pokemon Type</h1>
-        <p>{{ link }}</p>
         <table>
             <thead>
                 <tr>
@@ -63,7 +63,7 @@
         </table>
     </body>
 </html>
-
+{% endblock %}
 
 <style>
     body {
@@ -77,7 +77,7 @@
     }
     table {
         width: 50%;
-        /* border-collapse: collapse; */
+        border-collapse: collapse;
         border: 1px solid black;
     }
     th {
