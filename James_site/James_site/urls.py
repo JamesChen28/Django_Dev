@@ -21,6 +21,6 @@ from Pokemon.views import hello_world, pokemon_page
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', hello_world, name='hello_world'),
-    path('', pokemon_page, name='pokemon2'),
-    path('', include('Pokemon.urls')),
+    path('pm', pokemon_page, name='pokemon2'),
+    path('z', include('Pokemon.urls')),
 ]
