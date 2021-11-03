@@ -1,0 +1,30 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<body>
+    <p>testt</p>
+    <p>{{ link }}</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>上週\本週</th>
+                <th>波型</th>
+                <th>三期型</th>
+                <th>遞減型</th>
+                <th>四期型</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for tp in ac_show %}
+            <tr>
+                <td>{{ tp.上週_本週 }}</td>
+                <td>{{ tp.波型 }}</td>
+                <td>{{ tp.三期型 }}</td>
+                <td>{{ tp.遞減型 }}</td>
+                <td>{{ tp.四期型 }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+{% endblock %}
