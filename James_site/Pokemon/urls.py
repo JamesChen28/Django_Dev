@@ -4,6 +4,6 @@ from django.urls import path, re_path
 from Pokemon.views import pokemon_page, animal_crossing_page
 
 urlpatterns = [
-    re_path('/pokemon', pokemon_page, name='pm'),
-    re_path('/animal_crossing', animal_crossing_page, name='ac'),
+    re_path('pokemon', pokemon_page, name='pm'),
+    re_path('animal_crossing', animal_crossing_page, name='ac'),
 ]

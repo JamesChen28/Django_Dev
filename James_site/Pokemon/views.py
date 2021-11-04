@@ -8,7 +8,7 @@ import os
 import json
 
 
-def hello_world(request):
+def home_page(request):
     pm_data = load_pm_type()
     pm_show = []
 
@@ -42,9 +42,18 @@ print(load_pm_type)
 
 def pokemon_page(request):
     x = 'pokemon page'
+    pm_data = load_pm_type()
+    pm_show = []
+
+    # pm_page = pokemon_page(request)
+
+    for i in range(len(pm_data)):
+        pm_show.append(json.loads(pm_data.iloc[i].to_json(force_ascii = False)))
+
     return render(request, 'pokemon.html', {
         'current_time': str(datetime.now()),
         'link': x,
+        'pm_show': pm_show,
     })
 
 def animal_crossing_page(request):

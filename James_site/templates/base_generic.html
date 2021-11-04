@@ -9,8 +9,9 @@
 
 <body>
     {% block sidebar %}
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- {% load static %} -->
+    <!-- <link rel="stylesheet" href="{% static 'css/styles.css' %}"> -->
+    <link rel="stylesheet" href="/static/css/styles.css">
     <ul class="sidebar-nav">
         <li><a href="{% url 'hello_world' %}">Home</a></li>
         <li><a href="{% url 'pm' %}">Pokemon</a></li>
