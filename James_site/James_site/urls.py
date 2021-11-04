@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
-from Pokemon.views import home_page
+from Home.views import home_page
+# from Pokemon.views import home_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_page, name='hello_world'),
+    path('', home_page, name='home'),
+    path('home/', include('Home.urls')),
     path('app/', include('Pokemon.urls')),
     path('app/', include('Animal_Crossing.urls')),
 ]
