@@ -4,3 +4,31 @@
     list-style: none;
     color: red;
 }
+
+
+body {
+    background-color: lightyellow;
+}
+
+em {
+    color: LightSeaGreen;
+}
+
+p {
+    color: rgb(32, 34, 178);
+}
+
+.table {
+    width: 50%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.th {
+    height: 70px;
+}
+
+.td {
+    height: 30px;
+    text-align: right;
+}
