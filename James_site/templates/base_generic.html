@@ -4,17 +4,16 @@
 <head>
     {% block title %}
     <title>Django Demonstration Preview</title>
-    {% endblock %}
+    {% endblock title %}
 </head>
 
 <body>
     {% block sidebar %}
-    <!-- {% load static %} -->
-    <!-- <link rel="stylesheet" href="{% static 'css/styles.css' %}"> -->
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
     <ul class="sidebar-nav">
-        <li><a href="{% url 'home' %}">Home</a></li>
-        <li><a href="{% url 'pm' %}">Pokemon</a></li>
+        <li><a href="{% url 'home' %}" class ="p">Home</a></li>
+        <li><a href="{% url 'pm' %}" class = "em">Pokemon</a></li>
         <li><a href="{% url 'ac' %}">Animal Crossing</a></li>
     </ul>
     {% endblock %}
@@ -23,5 +22,7 @@
     <h1>base generic</h1>
     {% endblock %}
 </body>
+
+
 
 </html>
