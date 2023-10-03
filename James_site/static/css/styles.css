@@ -1,34 +1,38 @@
+
 .sidebar-nav {
-    margin-top: 20px;
+    margin-top: 200px;
     padding: 0;
     list-style: none;
-    color: red;
+    color: greenyellow;
+    font-size: 15px;
 }
 
 
 body {
-    background-color: lightyellow;
+    background-color: rgb(158, 166, 235);
 }
 
 em {
     color: LightSeaGreen;
+    font-size: 30px;
 }
 
 p {
-    color: rgb(32, 34, 178);
+    color: rgb(222, 22, 22);
+    font-size: 20px;
 }
 
-.table {
+table {
     width: 50%;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
     border: 1px solid black;
 }
 
-.th {
+th {
     height: 70px;
 }
 
-.td {
+td {
     height: 30px;
     text-align: right;
 }
